@@ -13,6 +13,22 @@ Built for **both non-technical users (friends, clients, community)** and **devel
 
 ---
 
+## 🤖 1-Line AI Agent Execution (Zero Setup)
+
+You or your friends can give this **single prompt** to any AI agent with browser access (Gemini, Claude, Cursor, Antigravity, Windsurf):
+
+```text
+Fetch and execute the instructions to submit my website to free web directories from https://raw.githubusercontent.com/iammrait/mraitdericli/master/prompt.md for https://YOUR_WEBSITE.com with email YOUR_EMAIL@domain.com
+```
+
+The AI agent will:
+1. Fetch the playbook from `prompt.md`.
+2. Pull the live verified directory queue from GitHub.
+3. Automatically visit your site to extract your title, description, and category keywords.
+4. Drive its browser tool to open each directory, fill the form, solve captchas with you, and submit!
+
+---
+
 ## 🌟 Why Friends & Non-Tech Users Love This
 
 Non-tech users don't need to write code or configure complex JSON files:
