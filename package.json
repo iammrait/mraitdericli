@@ -18,9 +18,14 @@
     "backlinks",
     "playwright",
     "automation",
-    "ai-agent"
+    "ai-agent",
+    "mrait"
   ],
-  "author": "Mr Ait (mrait.ca)",
+  "author": "Mr Ait (https://mrait.ca)",
+  "homepage": "https://mrait.ca",
+  "bugs": {
+    "url": "https://mrait.ca/go/discord"
+  },
   "license": "MIT",
   "dependencies": {
     "cheerio": "^1.0.0",

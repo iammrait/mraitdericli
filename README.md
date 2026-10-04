@@ -1,8 +1,13 @@
 # ⚡ Directory Submitter — AI Backlink Agent & CLI
 ### Automated SEO Directory Submitter with Auto-Site Detection & Human-in-the-Loop Captchas
-**Crafted with operational data from [mrait.ca](https://mrait.ca)**
+**Official Project by [Mr Ait (mrait.ca)](https://mrait.ca/)**  
+[![Discord Support](https://img.shields.io/badge/Discord-Support%20Community-5865F2?logo=discord&logoColor=white)](https://mrait.ca/go/discord)
+[![Website](https://img.shields.io/badge/Website-mrait.ca-3b82f6)](https://mrait.ca/)
 
 Turnkey tool for submitting websites to curated, high-trust free web directories to build foundational SEO backlinks and citations.
+
+- 🌐 **Official Website:** [https://mrait.ca/](https://mrait.ca/)
+- 💬 **Discord Support Community:** [https://mrait.ca/go/discord](https://mrait.ca/go/discord)
 
 Built for **both non-technical users (friends, clients, community)** and **developers / AI agents**.
 
@@ -125,6 +130,6 @@ mraitdericli/
 
 ---
 
-## 📄 License & Credits
-© 2026 [mrait.ca](https://mrait.ca) · Mr Ait. All rights reserved.
-Built from live operational campaigns and field-tested SEO submissions.
+## 📄 License & Support
+© 2026 [Mr Ait (mrait.ca)](https://mrait.ca) · All rights reserved.  
+Need help or want to join other web builders? Join our **[Discord Support Community](https://mrait.ca/go/discord)**.

@@ -35,8 +35,9 @@ async function main() {
   }
 
   console.log(`\n======================================================`);
-  console.log(`  ⚡ Directory Submitter CLI · by mrait.ca`);
-  console.log(`  Automated SEO Backlinks with Playwright`);
+  console.log(`  ⚡ Directory Submitter CLI · by Mr Ait`);
+  console.log(`  🌐 Website: https://mrait.ca/`);
+  console.log(`  💬 Support: https://mrait.ca/go/discord`);
   console.log(`======================================================\n`);
 
   let targetUrl = options.url;

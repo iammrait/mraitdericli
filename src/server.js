@@ -209,7 +209,8 @@ app.get('/api/download-tracker', (req, res) => {
 app.listen(PORT, async () => {
   console.log(`\n======================================================`);
   console.log(`  🚀 Directory Submitter running at: http://localhost:${PORT}`);
-  console.log(`  Designed for friendly, automated submissions`);
+  console.log(`  🌐 Website: https://mrait.ca/`);
+  console.log(`  💬 Support: https://mrait.ca/go/discord`);
   console.log(`======================================================\n`);
 
   // Auto-open browser on local startup

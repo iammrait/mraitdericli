@@ -236,6 +236,29 @@ input:focus, textarea:focus, select:focus {
   background: #dc2626;
 }
 
+.btn-discord {
+  background: #5865F2;
+  color: #ffffff;
+}
+
+.btn-discord:hover {
+  background: #4752c4;
+}
+
+.logo-link {
+  text-decoration: none;
+}
+
+.brand-link {
+  color: #60a5fa;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.brand-link:hover {
+  text-decoration: underline;
+}
+
 .btn-sm {
   padding: 6px 12px;
   font-size: 12px;
