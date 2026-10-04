@@ -122,12 +122,23 @@ export class SubmitterEngine {
     };
 
     try {
-      // 1. Navigate to Submit URL with timeout handling
+      // 1. Visit homepage first to establish session cookies (prevents 403 blocks)
+      const homeUrl = `https://${domain}`;
+      try {
+        await this.page.goto(homeUrl, { waitUntil: 'domcontentloaded', timeout: 15000 });
+        await this.page.waitForTimeout(1000);
+      } catch (_) {
+        // Fallback to http if https fails
+        try {
+          await this.page.goto(`http://${domain}`, { waitUntil: 'domcontentloaded', timeout: 12000 });
+        } catch (_) {}
+      }
+
+      // 2. Navigate to Submit URL with timeout handling
       let res;
       try {
         res = await this.page.goto(submitUrl, { waitUntil: 'domcontentloaded', timeout: 25000 });
       } catch (err) {
-        // Try fallback to http
         if (submitUrl.startsWith('https://')) {
           const fallback = submitUrl.replace('https://', 'http://');
           res = await this.page.goto(fallback, { waitUntil: 'domcontentloaded', timeout: 20000 });
@@ -167,37 +178,41 @@ export class SubmitterEngine {
         });
       });
 
-      // 3. Check for Free vs Paid Gate
-      const hasOnlyPaid = await this.page.evaluate(() => {
-        const body = document.body.innerText;
+      // 3. Inspect Link-Type Radios (Free vs Paid)
+      const radioCheck = await this.page.evaluate(() => {
         const radios = Array.from(document.querySelectorAll('input[type="radio"]'));
-        const labels = radios.map((r) => r.closest('label')?.innerText || r.parentElement?.innerText || '');
-        const mentionsFree = labels.some((l) => /free|regular|standard/i.test(l));
-        const allPaid = labels.length > 0 && !mentionsFree && labels.some((l) => /\$|\bpaid\b|\bfee\b/i.test(l));
-        return allPaid;
+        if (radios.length === 0) return { hasRadios: false, allPaid: false };
+
+        const radioInfos = radios.map((r) => {
+          const rowText = (r.closest('tr')?.innerText || r.parentElement?.innerText || '').toLowerCase();
+          const isFree = /free|regular|standard|normal|\$0/i.test(rowText);
+          const isPaid = /\$|\bfee\b|\bpaid\b/i.test(rowText) && !isFree;
+          return { element: r, isFree, isPaid, rowText };
+        });
+
+        // Click the first free / regular radio
+        const freeRadio = radioInfos.find((ri) => ri.isFree);
+        if (freeRadio) {
+          freeRadio.element.click();
+          return { hasRadios: true, allPaid: false, selectedFree: true };
+        }
+
+        // Check if every radio is explicitly paid
+        const allPaid = radioInfos.length > 0 && radioInfos.every((ri) => ri.isPaid);
+        if (allPaid) {
+          return { hasRadios: true, allPaid: true };
+        }
+
+        // Fallback: select last radio (conventionally free/regular in phpLD)
+        radios[radios.length - 1].click();
+        return { hasRadios: true, allPaid: false };
       });
 
-      if (hasOnlyPaid) {
+      if (radioCheck.allPaid) {
         outcome.status = 'SKIPPED';
-        outcome.notes = 'PAID-gated';
+        outcome.notes = 'PAID-gated (No free tier)';
         return outcome;
       }
-
-      // If radio buttons for LINK_TYPE exist, click the "free" or "regular" one
-      await this.page.evaluate(() => {
-        const radios = Array.from(document.querySelectorAll('input[type="radio"]'));
-        for (const radio of radios) {
-          const text = (radio.closest('label')?.innerText || radio.parentElement?.innerText || '').toLowerCase();
-          if (text.includes('free') || text.includes('regular') || text.includes('standard')) {
-            radio.click();
-            return;
-          }
-        }
-        // If no explicit label text, select last radio if available (often free tier)
-        if (radios.length > 0) {
-          radios[radios.length - 1].click();
-        }
-      });
 
       // 4. Select Category
       const categorySelected = await this.selectCategory(kit.category_keywords || []);
@@ -285,10 +300,12 @@ export class SubmitterEngine {
 
         if (isCatSelect) {
           const options = await sel.evaluate((el) => {
-            return Array.from(el.options).map((opt) => ({
-              value: opt.value,
-              text: opt.text,
-            }));
+            return Array.from(el.options)
+              .map((opt) => ({
+                value: opt.value,
+                text: opt.text,
+              }))
+              .filter((o) => o.value && o.value !== '0' && o.value !== '-1' && !/^(--|select|choose)/i.test(o.text.trim()));
           });
 
           const best = pickBestCategory(options, categoryKeywords);
@@ -507,8 +524,15 @@ export class SubmitterEngine {
     if (text.includes('not unique') || text.includes('already been submitted') || text.includes('already listed')) {
       return { status: 'FAILED', submitted: false, notes: 'DUPLICATE (Already submitted)' };
     }
-    if (text.includes('payment') || url.includes('payment.php') || text.includes('checkout') || text.includes('paypal')) {
-      return { status: 'SKIPPED', submitted: false, notes: 'PAID-gated' };
+    if (url.includes('payment.php') || url.includes('paypal.com') || url.includes('/checkout')) {
+      return { status: 'SKIPPED', submitted: false, notes: 'PAID-gated (Redirected to payment page)' };
+    }
+    const isPaymentDemand = await this.page.evaluate(() => {
+      const h = Array.from(document.querySelectorAll('h1, h2, h3, .title, .header')).map((e) => e.innerText.toLowerCase());
+      return h.some((t) => t.includes('make a payment') || t.includes('complete payment') || t.includes('checkout'));
+    });
+    if (isPaymentDemand) {
+      return { status: 'SKIPPED', submitted: false, notes: 'PAID-gated (Payment demanded)' };
     }
     if (text.includes('error occured') || text.includes('an error occurred')) {
       return { status: 'FAILED', submitted: false, notes: 'BROKEN-server-error' };
