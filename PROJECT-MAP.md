@@ -114,8 +114,11 @@ Nothing has been installed, executed, or pointed at any directory. Say the word 
 
 ## 7. Decisions to make
 
-1. **Ship order:** A (agent pack) first, then B? Or B straight away?
-2. **Audience:** internal tool for our own campaigns first, or productized for mrait.ca visitors from day one?
-3. **Name:** `mrait-directory` / `mrait-dir` CLI / "Mr Ait Directory Submitter"?
-4. **Captcha default:** human-in-the-loop (recommended, ToS-safe) — confirm 2Captcha adapter is wanted at all.
-5. **First target CSV source:** the 80 queued from the Oct campaign, or scrape the 3 blueprint sources fresh for a ~437-domain universe?
+> **Recommended verdict (2026-10-03): ship ONE GitHub repo that starts as the agent pack (Option A = v1) and grows the CLI (Option B = v2) inside it. Vercel is not needed — the engine cannot run there (needs a real local browser + human captcha clicks); the landing page belongs on mrait.ca where it also earns SEO. GitHub Actions hosts the free monthly re-verification cron that auto-commits the refreshed CSV — that maintains the moat at zero cost.**
+
+1. **Ship order:** ~~open~~ → resolved: agent pack first, CLI second, same repo.
+2. **Audience:** both — the repo serves agent users (copy SKILL.md) and CLI users (npx) from day one; the *funnel* lives on mrait.ca.
+3. **Name:** `mrait-directory` (repo) / `mrait-dir` (CLI command) / "Mr Ait Directory Submitter" (product page).
+4. **Captcha default:** human-in-the-loop (ToS-safe). 2Captcha adapter only behind an explicit opt-in flag.
+5. **First run list:** the 80 queued from the Oct campaign — real, reason-coded, already ours. Fresh scrape of the 3 blueprint sources becomes the GitHub Actions job's job later.
+6. **Hosting:** GitHub (code + data + cron). No Vercel. mrait.ca page = the lead-magnet funnel.

@@ -68,7 +68,7 @@ You can host this on your VPS (Ubuntu, Debian, DigitalOcean, Hetzner, etc.) so y
 
 ### Option A: Using Docker (Recommended)
 ```bash
-git clone https://github.com/your-username/mraitdericli.git
+git clone https://github.com/iammrait/mraitdericli.git
 cd mraitdericli
 docker compose up -d --build
 ```
@@ -76,7 +76,7 @@ Your submitter dashboard will be live at `http://YOUR_SERVER_IP:3000`!
 
 ### Option B: Using PM2 / Node.js
 ```bash
-git clone https://github.com/your-username/mraitdericli.git
+git clone https://github.com/iammrait/mraitdericli.git
 cd mraitdericli
 npm install
 npx playwright install chromium
