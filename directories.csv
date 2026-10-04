@@ -1,0 +1,158 @@
+domain,url,submit_url,category,http,status,submitted,date,notes
+somuch.com,https://somuch.com/,,,,submitted,yes,2026-10-01,submitted + email verified (ID 3956004)
+jayde.com,https://jayde.com/,,,,submitted,yes,2026-10-01,confirmed via thank-you page
+gainweb.org,https://gainweb.org/,,,,submitted,yes,2026-10-01,awaiting approval; Education > Job & Employment
+9sites.net,https://9sites.net/,,,,submitted,yes,2026-10-01,editor review; Education > Career & Vocational
+sonicrun.com,https://sonicrun.com/,,,,submitted,yes,2026-10-01,email verified; listing live in ~30 days
+infotiger.com,https://infotiger.com/,,,,submitted,yes,2026-10-01,"queued, no confirmation shown (crawl submission)"
+01webdirectory.com,https://01webdirectory.com/,,,,submitted,yes,2026-10-01,editor validation; HR > Career Counseling
+247webdirectory.com,https://247webdirectory.com/,,,,submitted,yes,2026-10-01,pending review; Education > Career
+cipinet.com,https://cipinet.com/,,,,submitted,yes,2026-10-01,review queue; Business
+txtlinks.com,https://txtlinks.com/,,,,submitted,yes,2026-10-01,editor review; Education
+freeprwebdirectory.com,https://freeprwebdirectory.com/,,,,submitted,yes,2026-10-01,awaiting approval
+submissionwebdirectory.com,https://submissionwebdirectory.com/,,,,submitted,yes,2026-10-01,awaiting approval
+highrankdirectory.com,https://highrankdirectory.com/,,,,submitted,yes,2026-10-01,awaiting approval
+hitwebdirectory.com,https://hitwebdirectory.com/,,,,submitted,yes,2026-10-01,awaiting approval
+prolinkdirectory.com,https://prolinkdirectory.com/,,,,submitted,yes,2026-10-01,pending review; Careers > Education & Careers
+directory-free.com,https://directory-free.com/,,,,submitted,yes,2026-10-01,editor validation; Society > Education
+adbritedirectory.com,https://adbritedirectory.com/,,,,submitted,yes,2026-10-01,awaiting approval
+allstatesusadirectory.com,https://allstatesusadirectory.com/,,,,submitted,yes,2026-10-01,awaiting approval
+arcticdirectory.com,https://arcticdirectory.com/,,,,submitted,yes,2026-10-01,accepted; Career & Vocational
+australiawebdirectory.net,https://australiawebdirectory.net/,,,,submitted,yes,2026-10-01,awaiting approval
+backpagedir.com,https://backpagedir.com/,,,,submitted,yes,2026-10-01,accepted; Education
+bedirectory.com,https://bedirectory.com/,,,,submitted,yes,2026-10-01,accepted
+bizz-directory.com,https://bizz-directory.com/,,,,submitted,yes,2026-10-01,accepted; Employment
+blackandbluedirectory.com,https://blackandbluedirectory.com/,,,,submitted,yes,2026-10-01,awaiting approval; Employment
+ecobluedirectory.com,https://ecobluedirectory.com/,,,,submitted,yes,2026-10-01,awaiting approval; Employment
+expansiondirectory.com,https://expansiondirectory.com/,,,,submitted,yes,2026-10-01,submitted via manual captcha click
+directory10.org,https://directory10.org/,,,,submitted,yes,2026-10-01,accepted
+direct-directory.com,https://direct-directory.com/,,,,submitted,yes,2026-10-01,awaiting approval; Employment
+directdirectory.org,https://directdirectory.org/,,,,submitted,yes,2026-10-01,accepted; no category field
+viesearch.com,https://viesearch.com/,,,,submitted,yes,2026-10-01,already in review queue before campaign
+fruity-directory.com,https://fruity-directory.com/,,,,captcha-human,no,2026-10-01,"form pre-filled, needs human captcha click"
+dbsdirectory.com,https://dbsdirectory.com/,,,,captcha-human,no,2026-10-01,one human click away
+directory3.org,https://directory3.org/,,,,captcha-human,no,2026-10-01,one human click away
+advancedseodirectory.com,https://advancedseodirectory.com/,,,,captcha-human,no,2026-10-01,reCAPTCHA ignores automated clicks
+afunnydir.com,https://afunnydir.com/,,,,captcha-human,no,2026-10-01,image challenge appears
+alive-directory.com,https://alive-directory.com/,,,,captcha-human,no,2026-10-01,image challenge appears
+greenydirectory.com,https://greenydirectory.com/,,,,captcha-hostile,no,2026-10-01,captcha fails even for human click - broken
+exactseek.com,https://exactseek.com/,,,,blocked-manual,no,2026-10-01,Cloudflare strips automated form posts; 30-sec manual job
+cleangreendirectory.com,https://cleangreendirectory.com/,,,,retry-later,no,2026-10-01,server overloaded (508) at time of run
+alivelink.org,https://alivelink.org/,,,,broken-norm,no,2026-10-01,captcha solved but submit button does nothing (dead handler)
+1abc.org,https://1abc.org/,,,,dead-parked,no,2026-10-01,"domain expired, parked at GoDaddy"
+a1webdirectory.org,https://a1webdirectory.org/,,,,dead-hijacked,no,2026-10-01,serves gambling spam
+acewebdirectory.com,https://acewebdirectory.com/,,,,dead-parked,no,2026-10-01,domain parked
+domaining.in,https://domaining.in/,,,,dead-forsale,no,2026-10-01,domain for sale
+searchsight.com,https://searchsight.com/,,,,dead-forsale,no,2026-10-01,domain for sale on GoDaddy
+directory5.org,https://directory5.org/,,,,dead-suspended,no,2026-10-01,hosting account suspended
+digabusiness.com,https://digabusiness.com/,,,,dead-blank,no,2026-10-01,blank page on submit
+w3catalog.com,https://w3catalog.com/,,,,dead-pivoted,no,2026-10-01,no longer a directory - review articles now
+amray.com,https://amray.com/,,,,broken-sql,no,2026-10-01,free-submit script throws SQL error
+athenelinks.com,https://athenelinks.com/,,,,broken-sql,no,2026-10-01,MySQL error - IP column too short
+caida.eu,https://caida.eu/,,,,broken-sql,no,2026-10-01,"server save error, same network bug as Athenelinks"
+bing-directory.com,https://bing-directory.com/,,,,broken-sql,no,2026-10-01,SQL error - LINK_TYPE column gets no value
+admyurl.com,https://admyurl.com/,,,,broken-blank,no,2026-10-01,submit returns blank page (handler dead)
+000directory.com.ar,https://000directory.com.ar/,,,,no-form,no,2026-10-01,submit page renders no form
+abc-directory.com,https://abc-directory.com/,,,,no-form,no,2026-10-01,submit page never shows its form
+a2place.com,https://a2place.com/,,,,broken-wizard,no,2026-10-01,submit wizard stuck at step 1
+abstractdirectory.net,https://abstractdirectory.net/,,,,no-form,no,2026-10-01,submit form missing entirely
+activdirectory.net,https://activdirectory.net/,,,,broken-wizard,no,2026-10-01,stuck wizard template
+aweblist.org,https://aweblist.org/,,,,broken-wizard,no,2026-10-01,stuck wizard template
+businessfreedirectory.com,https://businessfreedirectory.com/,,,,broken-wizard,no,2026-10-01,3-step wizard hung on final submit
+directory6.org,https://directory6.org/,,,,broken-wizard,no,2026-10-01,stuck wizard template
+tsection.com,https://tsection.com/,,,,broken-redirect,no,2026-10-01,redirect loop on submit page
+pegasusdirectory.com,https://pegasusdirectory.com/,,,,broken-host,no,2026-10-01,add-listing page dead (host error)
+bpdir.com,https://bpdir.com/,,,,no-form,no,2026-10-01,free tier advertised but no form exists
+alivelinks.org,https://alivelinks.org/,,,,broken-hang,no,2026-10-01,page hangs the browser
+classdirectory.org,https://classdirectory.org/,,,,broken-wizard,no,2026-10-01,unconfigured install + captcha-walled (low value)
+ayroo.com,https://ayroo.com/,,,,paid-gated,no,2026-10-01,takes listing then demands payment
+businessseek.biz,https://businessseek.biz/,,,,paid-gated,no,2026-10-01,free submission retired - $20/yr sponsored only
+corpdirectory.info,https://corpdirectory.info/,,,,paid-gated,no,2026-10-01,both tiers route to payment page; reciprocal also required
+directoryvault.com,https://directoryvault.com/,,,,paid-gated,no,2026-10-01,all plans paid and auto-renewing
+alistdirectory.com,https://alistdirectory.com/,,,,paid-gated,no,2026-10-01,claim-based paid plans (DirectoryVault network)
+weboworld.com,https://weboworld.com/,,,,paid-gated,no,2026-10-01,only plan is $10 featured; account was created+verified first
+worldsiteindex.com,https://worldsiteindex.com/,,,,paid-gated,no,2026-10-01,submission routes to PayPal
+daduru.com,https://daduru.com/,,,,needs-nap,no,2026-10-01,"requires business phone, address, hours (NAP)"
+skaffe.com,https://skaffe.com/,,,,weekend-window,no,2026-10-01,free submissions only Fri 6pm - Mon 6am EDT
+activesearchresults.com,https://activesearchresults.com/,,,,needs-activation,no,2026-10-01,"account exists, needs password reset"
+netinsert.com,https://netinsert.com/,,,,needs-meta,no,2026-10-01,requires pasting one meta tag into site HTML
+best-financial-directory.com,https://best-financial-directory.com/,,,,ok,no,2026-10-02,queued from Oct 2026 campaign; submit URL not yet verified
+businessconnect.directory,https://businessconnect.directory/,,,,ok,no,2026-10-02,queued from Oct 2026 campaign; submit URL not yet verified
+canadiandirectory.org,https://canadiandirectory.org/,,,,ok,no,2026-10-02,queued from Oct 2026 campaign; submit URL not yet verified
+canopusdirectory.com,https://canopusdirectory.com/,,,,ok,no,2026-10-02,queued from Oct 2026 campaign; submit URL not yet verified
+directorycar.com,https://directorycar.com/,,,,ok,no,2026-10-02,queued from Oct 2026 campaign; submit URL not yet verified
+directorysitesubmit.com,https://directorysitesubmit.com/,,,,ok,no,2026-10-02,queued from Oct 2026 campaign; submit URL not yet verified
+dirhello.com,https://dirhello.com/,,,,ok,no,2026-10-02,queued from Oct 2026 campaign; submit URL not yet verified
+domainnamesseo.com,https://domainnamesseo.com/,,,,ok,no,2026-10-02,queued from Oct 2026 campaign; submit URL not yet verified
+dracodirectory.com,https://dracodirectory.com/,,,,ok,no,2026-10-02,queued from Oct 2026 campaign; submit URL not yet verified
+ellysdirectory.com,https://ellysdirectory.com/,,,,ok,no,2026-10-02,queued from Oct 2026 campaign; submit URL not yet verified
+excitedirectory.com,https://excitedirectory.com/,,,,ok,no,2026-10-02,queued from Oct 2026 campaign; submit URL not yet verified
+familydir.com,https://familydir.com/,,,,ok,no,2026-10-02,queued from Oct 2026 campaign; submit URL not yet verified
+fashionlistings.org,https://fashionlistings.org/,,,,ok,no,2026-10-02,queued from Oct 2026 campaign; submit URL not yet verified
+finest4.com,https://finest4.com/,,,,ok,no,2026-10-02,queued from Oct 2026 campaign; submit URL not yet verified
+fire-directory.com,https://fire-directory.com/,,,,ok,no,2026-10-02,queued from Oct 2026 campaign; submit URL not yet verified
+flamingodirectory.com,https://flamingodirectory.com/,,,,ok,no,2026-10-02,queued from Oct 2026 campaign; submit URL not yet verified
+free-weblink.com,https://free-weblink.com/,,,,ok,no,2026-10-02,queued from Oct 2026 campaign; submit URL not yet verified
+freedirectory-listings.org,https://freedirectory-listings.org/,,,,ok,no,2026-10-02,queued from Oct 2026 campaign; submit URL not yet verified
+freeinternetwebdirectory.com,https://freeinternetwebdirectory.com/,,,,ok,no,2026-10-02,queued from Oct 2026 campaign; submit URL not yet verified
+freeseolink.org,https://freeseolink.org/,,,,ok,no,2026-10-02,queued from Oct 2026 campaign; submit URL not yet verified
+freetoprankdirectory.com,https://freetoprankdirectory.com/,,,,ok,no,2026-10-02,queued from Oct 2026 campaign; submit URL not yet verified
+freewebsubmission.com,https://freewebsubmission.com/,,,,ok,no,2026-10-02,queued from Oct 2026 campaign; submit URL not yet verified
+gmawebdirectory.com,https://gmawebdirectory.com/,,,,ok,no,2026-10-02,queued from Oct 2026 campaign; submit URL not yet verified
+golddirectory.info,https://golddirectory.info/,,,,ok,no,2026-10-02,queued from Oct 2026 campaign; submit URL not yet verified
+h-log.com,https://h-log.com/,,,,ok,no,2026-10-02,queued from Oct 2026 campaign; submit URL not yet verified
+harddirectory.info,https://harddirectory.info/,,,,ok,no,2026-10-02,queued from Oct 2026 campaign; submit URL not yet verified
+hotdirectory.net,https://hotdirectory.net/,,,,ok,no,2026-10-02,queued from Oct 2026 campaign; submit URL not yet verified
+huludirectory.com,https://huludirectory.com/,,,,ok,no,2026-10-02,queued from Oct 2026 campaign; submit URL not yet verified
+idahoindex.com,https://idahoindex.com/,,,,ok,no,2026-10-02,queued from Oct 2026 campaign; submit URL not yet verified
+indusdirectory.com,https://indusdirectory.com/,,,,ok,no,2026-10-02,queued from Oct 2026 campaign; submit URL not yet verified
+intercambioseo.com,https://intercambioseo.com/,,,,ok,no,2026-10-02,queued from Oct 2026 campaign; submit URL not yet verified
+justdirectory.org,https://justdirectory.org/,,,,ok,no,2026-10-02,queued from Oct 2026 campaign; submit URL not yet verified
+justlink.org,https://justlink.org/,,,,ok,no,2026-10-02,queued from Oct 2026 campaign; submit URL not yet verified
+latesttopdirectory.org,https://latesttopdirectory.org/,,,,ok,no,2026-10-02,queued from Oct 2026 campaign; submit URL not yet verified
+legacydirectory.com,https://legacydirectory.com/,,,,ok,no,2026-10-02,queued from Oct 2026 campaign; submit URL not yet verified
+lemon-directory.com,https://lemon-directory.com/,,,,ok,no,2026-10-02,queued from Oct 2026 campaign; submit URL not yet verified
+linkcentre.com,https://linkcentre.com/,,,,ok,no,2026-10-02,queued from Oct 2026 campaign; submit URL not yet verified
+linkdir4u.com,https://linkdir4u.com/,,,,ok,no,2026-10-02,queued from Oct 2026 campaign; submit URL not yet verified
+linkdirectorylistings.org,https://linkdirectorylistings.org/,,,,ok,no,2026-10-02,queued from Oct 2026 campaign; submit URL not yet verified
+livewebmarks.com,https://livewebmarks.com/,,,,ok,no,2026-10-02,queued from Oct 2026 campaign; submit URL not yet verified
+lushdirectory.com,https://lushdirectory.com/,,,,ok,no,2026-10-02,queued from Oct 2026 campaign; submit URL not yet verified
+marketinginternetdirectory.com,https://marketinginternetdirectory.com/,,,,ok,no,2026-10-02,queued from Oct 2026 campaign; submit URL not yet verified
+marketingwebdirectory.com,https://marketingwebdirectory.com/,,,,ok,no,2026-10-02,queued from Oct 2026 campaign; submit URL not yet verified
+moderntopdirectory.org,https://moderntopdirectory.org/,,,,ok,no,2026-10-02,queued from Oct 2026 campaign; submit URL not yet verified
+nctweb.com,https://nctweb.com/,,,,ok,no,2026-10-02,queued from Oct 2026 campaign; submit URL not yet verified
+one-sublime-directory.com,https://one-sublime-directory.com/,,,,ok,no,2026-10-02,queued from Oct 2026 campaign; submit URL not yet verified
+onemilliondirectory.com,https://onemilliondirectory.com/,,,,ok,no,2026-10-02,queued from Oct 2026 campaign; submit URL not yet verified
+orcca.org,https://orcca.org/,,,,ok,no,2026-10-02,queued from Oct 2026 campaign; submit URL not yet verified
+postfreedirectory.com,https://postfreedirectory.com/,,,,ok,no,2026-10-02,queued from Oct 2026 campaign; submit URL not yet verified
+promotebusinessdirectory.com,https://promotebusinessdirectory.com/,,,,ok,no,2026-10-02,queued from Oct 2026 campaign; submit URL not yet verified
+qualityinternetdirectory.com,https://qualityinternetdirectory.com/,,,,ok,no,2026-10-02,queued from Oct 2026 campaign; submit URL not yet verified
+quickdirectory.biz,https://quickdirectory.biz/,,,,ok,no,2026-10-02,queued from Oct 2026 campaign; submit URL not yet verified
+quicklinks.net,https://quicklinks.net/,,,,ok,no,2026-10-02,queued from Oct 2026 campaign; submit URL not yet verified
+searchdirectory.info,https://searchdirectory.info/,,,,ok,no,2026-10-02,queued from Oct 2026 campaign; submit URL not yet verified
+searchdomainhere.com,https://searchdomainhere.com/,,,,ok,no,2026-10-02,queued from Oct 2026 campaign; submit URL not yet verified
+seooptimizationdirectory.com,https://seooptimizationdirectory.com/,,,,ok,no,2026-10-02,queued from Oct 2026 campaign; submit URL not yet verified
+seotarget.net,https://seotarget.net/,,,,ok,no,2026-10-02,queued from Oct 2026 campaign; submit URL not yet verified
+seowebdir.net,https://seowebdir.net/,,,,ok,no,2026-10-02,queued from Oct 2026 campaign; submit URL not yet verified
+sitepromotiondirectory.com,https://sitepromotiondirectory.com/,,,,ok,no,2026-10-02,queued from Oct 2026 campaign; submit URL not yet verified
+sites-plus.com,https://sites-plus.com/,,,,ok,no,2026-10-02,queued from Oct 2026 campaign; submit URL not yet verified
+siteswebdirectory.com,https://siteswebdirectory.com/,,,,ok,no,2026-10-02,queued from Oct 2026 campaign; submit URL not yet verified
+sizzlingdirectory.com,https://sizzlingdirectory.com/,,,,ok,no,2026-10-02,queued from Oct 2026 campaign; submit URL not yet verified
+smartseobacklink.com,https://smartseobacklink.com/,,,,ok,no,2026-10-02,queued from Oct 2026 campaign; submit URL not yet verified
+smartseolink.org,https://smartseolink.org/,,,,ok,no,2026-10-02,queued from Oct 2026 campaign; submit URL not yet verified
+sublimedir.net,https://sublimedir.net/,,,,ok,no,2026-10-02,queued from Oct 2026 campaign; submit URL not yet verified
+submit.biz,https://submit.biz/,,,,ok,no,2026-10-02,queued from Oct 2026 campaign; submit URL not yet verified
+submitindustry.com,https://submitindustry.com/,,,,ok,no,2026-10-02,queued from Oct 2026 campaign; submit URL not yet verified
+taurusdirectory.com,https://taurusdirectory.com/,,,,ok,no,2026-10-02,queued from Oct 2026 campaign; submit URL not yet verified
+theseobacklink.com,https://theseobacklink.com/,,,,ok,no,2026-10-02,queued from Oct 2026 campaign; submit URL not yet verified
+trafficdirectory.org,https://trafficdirectory.org/,,,,ok,no,2026-10-02,queued from Oct 2026 campaign; submit URL not yet verified
+ukinternetdirectory.net,https://ukinternetdirectory.net/,,,,ok,no,2026-10-02,queued from Oct 2026 campaign; submit URL not yet verified
+uklinks.info,https://uklinks.info/,,,,ok,no,2026-10-02,queued from Oct 2026 campaign; submit URL not yet verified
+unique-listing.com,https://unique-listing.com/,,,,ok,no,2026-10-02,queued from Oct 2026 campaign; submit URL not yet verified
+universaldirectory.info,https://universaldirectory.info/,,,,ok,no,2026-10-02,queued from Oct 2026 campaign; submit URL not yet verified
+upsdirectory.com,https://upsdirectory.com/,,,,ok,no,2026-10-02,queued from Oct 2026 campaign; submit URL not yet verified
+webglance.com,https://webglance.com/,,,,ok,no,2026-10-02,queued from Oct 2026 campaign; submit URL not yet verified
+websquash.com,https://websquash.com/,,,,ok,no,2026-10-02,queued from Oct 2026 campaign; submit URL not yet verified
+welcomelinks.info,https://welcomelinks.info/,,,,ok,no,2026-10-02,queued from Oct 2026 campaign; submit URL not yet verified
+workdirectory.info,https://workdirectory.info/,,,,ok,no,2026-10-02,queued from Oct 2026 campaign; submit URL not yet verified
+yellowlinker.com,https://yellowlinker.com/,,,,ok,no,2026-10-02,queued from Oct 2026 campaign; submit URL not yet verified

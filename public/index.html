@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Directory Submitter — AI Backlink Agent</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Header -->
+    <header class="header">
+      <div class="brand">
+        <div class="logo-badge">⚡</div>
+        <div>
+          <h1>Directory Submitter</h1>
+          <p class="subtitle">Automated SEO Backlink Agent · Powered by mrait.ca operational blueprint</p>
+        </div>
+      </div>
+      <div class="header-badges">
+        <span class="badge badge-pulse" id="queue-status-badge">Loading queue...</span>
+        <button class="btn btn-secondary btn-sm" id="btn-download-csv">⬇️ Download Results CSV</button>
+      </div>
+    </header>
+
+    <!-- Captcha Modal / Banner Alert -->
+    <div id="captcha-modal" class="modal-overlay hidden">
+      <div class="modal-card">
+        <div class="modal-icon">⚠️</div>
+        <h3>Captcha Action Needed</h3>
+        <p id="captcha-modal-msg">A captcha was detected. Please solve the captcha in the open browser window, then click continue.</p>
+        <div class="modal-domain-tag" id="captcha-domain-display">example.com</div>
+        <div class="modal-actions">
+          <button id="btn-captcha-done" class="btn btn-primary btn-lg">✅ I've Completed Captcha - Continue</button>
+          <button id="btn-captcha-skip" class="btn btn-secondary">⏭️ Skip This Site</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Grid -->
+    <main class="main-content">
+      <!-- Step 1 & 2: Setup Kit -->
+      <section class="card setup-card" id="setup-section">
+        <div class="card-header">
+          <span class="step-num">Step 1</span>
+          <h2>Your Website Info</h2>
+          <span class="card-helper">Enter your link and we auto-generate all listing fields for you</span>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group flex-2">
+            <label for="input-site-url">Website URL</label>
+            <input type="url" id="input-site-url" placeholder="https://mywebsite.com" required>
+          </div>
+          <div class="form-group flex-2">
+            <label for="input-email">Contact / Submissions Email</label>
+            <input type="email" id="input-email" placeholder="hello@mywebsite.com" required>
+          </div>
+          <div class="form-group flex-1 form-group-btn">
+            <button id="btn-auto-detect" class="btn btn-accent">
+              <span class="btn-text">🪄 Auto-Detect Info</span>
+              <span class="spinner hidden" id="detect-spinner"></span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Generated Fields (Editable) -->
+        <div id="generated-fields" class="generated-box">
+          <div class="section-divider">
+            <span>Generated Listing Details (Review or Edit)</span>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group flex-1">
+              <label for="input-site-name">Brand / Site Name</label>
+              <input type="text" id="input-site-name" placeholder="Brand Name">
+            </div>
+            <div class="form-group flex-1">
+              <label for="input-keywords">Keywords (Comma separated)</label>
+              <input type="text" id="input-keywords" placeholder="business, services, online">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Rotating Title Variants (Avoids duplicate listing errors)</label>
+            <div class="variants-grid">
+              <input type="text" id="input-title-1" placeholder="Title Variant 1 (Main)">
+              <input type="text" id="input-title-2" placeholder="Title Variant 2 (Alternative)">
+              <input type="text" id="input-title-3" placeholder="Title Variant 3 (Topic)">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Tiered Descriptions (Satisfies short, medium & 200+ char rules)</label>
+            <div class="descriptions-grid">
+              <div>
+                <span class="desc-tag">Medium (220+ chars)</span>
+                <textarea id="input-desc-med" rows="3" placeholder="Medium description..."></textarea>
+              </div>
+              <div>
+                <span class="desc-tag">Short (130 chars)</span>
+                <textarea id="input-desc-short" rows="3" placeholder="Short description..."></textarea>
+              </div>
+              <div>
+                <span class="desc-tag">Long (320+ chars)</span>
+                <textarea id="input-desc-long" rows="3" placeholder="Long description..."></textarea>
+              </div>
+            </div>
+          </div>
+
+          <!-- Submission Controls -->
+          <div class="submission-bar">
+            <div class="batch-options">
+              <label>Queue Target:</label>
+              <select id="select-queue-filter">
+                <option value="instant">⚡ 32 Instant-Approval Directories (Quick Wins)</option>
+                <option value="established">🏛️ 96 Established Directories (Higher DA)</option>
+                <option value="all" selected>🌐 Full Universe (128+ Directories)</option>
+              </select>
+              <label>Limit per run:</label>
+              <input type="number" id="input-max-sites" value="25" min="5" max="150" style="width: 75px;">
+            </div>
+
+            <button id="btn-start-run" class="btn btn-primary btn-lg">
+              🚀 Start Automated Submissions
+            </button>
+          </div>
+        </div>
+
+        <!-- Reciprocal Link Snippet Box (For non-tech users) -->
+        <div class="reciprocal-box">
+          <div class="reciprocal-title">
+            <span>💡 Optional: Reciprocal Link Code for Your Website</span>
+          </div>
+          <p>Some directories ask for a link back. If you have a "Links" or "Partners" page on your website, copy-paste this HTML code onto your site:</p>
+          <div class="code-copy-row">
+            <code id="reciprocal-code-snippet">&lt;a href="https://mrait.ca" target="_blank" rel="noopener"&gt;Featured Web Directory&lt;/a&gt;</code>
+            <button class="btn btn-secondary btn-sm" id="btn-copy-code">Copy HTML</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Live Execution Monitor -->
+      <section class="card monitor-card">
+        <div class="card-header">
+          <span class="step-num">Step 2</span>
+          <h2>Live Submission Monitor</h2>
+          <div class="monitor-controls">
+            <button id="btn-stop-run" class="btn btn-danger btn-sm hidden">⏹️ Stop Session</button>
+          </div>
+        </div>
+
+        <div class="progress-box">
+          <div class="progress-label">
+            <span id="current-target-text">Waiting to start...</span>
+            <span id="progress-percentage-text">0%</span>
+          </div>
+          <div class="progress-track">
+            <div class="progress-bar" id="progress-fill" style="width: 0%;"></div>
+          </div>
+        </div>
+
+        <!-- Summary Stats Pills -->
+        <div class="stats-grid">
+          <div class="stat-pill stat-green">
+            <span class="stat-num" id="stat-submitted">0</span>
+            <span class="stat-label">Submitted</span>
+          </div>
+          <div class="stat-pill stat-yellow">
+            <span class="stat-num" id="stat-pending">0</span>
+            <span class="stat-label">Checked</span>
+          </div>
+          <div class="stat-pill stat-gray">
+            <span class="stat-num" id="stat-skipped">0</span>
+            <span class="stat-label">Skipped (Paid/Broken)</span>
+          </div>
+        </div>
+
+        <!-- Live Activity Log -->
+        <div class="log-container">
+          <div class="log-header">Live Submission Activity</div>
+          <div class="log-stream" id="log-stream">
+            <div class="log-entry log-placeholder">No active session yet. Click "Start Automated Submissions" above.</div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>© 2026 Directory Submitter · Created with operational blueprints from <a href="https://mrait.ca" target="_blank">mrait.ca</a></p>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

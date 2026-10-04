@@ -1,0 +1,32 @@
+{
+  "name": "mraitdericli",
+  "version": "1.0.0",
+  "description": "Automated SEO Directory Submitter & AI Agent with auto-site detection and human-in-the-loop captcha flow",
+  "main": "src/server.js",
+  "bin": {
+    "mraitdericli": "src/cli.js"
+  },
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "cli": "node src/cli.js",
+    "test-browser": "node src/test-browser.js"
+  },
+  "keywords": [
+    "seo",
+    "directory-submission",
+    "backlinks",
+    "playwright",
+    "automation",
+    "ai-agent"
+  ],
+  "author": "Mr Ait (mrait.ca)",
+  "license": "MIT",
+  "dependencies": {
+    "cheerio": "^1.0.0",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "open": "^10.1.0",
+    "playwright": "^1.49.0"
+  }
+}
