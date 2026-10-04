@@ -2,4 +2,8 @@ node_modules/
 .DS_Store
 *.log
 _docx_extract/
+_report_text.txt
+*.docx
+_seed.py
+tracker.csv
 .env
