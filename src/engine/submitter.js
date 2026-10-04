@@ -254,8 +254,14 @@ export class SubmitterEngine {
         return outcome;
       }
 
-      // 8. Wait for response & Detect Outcome
-      await this.page.waitForTimeout(4000);
+      // 8. Wait safely for response/navigation
+      try {
+        await Promise.race([
+          this.page.waitForLoadState('domcontentloaded', { timeout: 12000 }),
+          this.page.waitForTimeout(5000),
+        ]);
+      } catch (_) {}
+      await this.page.waitForTimeout(2000);
 
       const outcomeResult = await this.detectOutcome();
       outcome.status = outcomeResult.status;
@@ -505,9 +511,24 @@ export class SubmitterEngine {
     });
   }
 
+  async getPageText() {
+    for (let i = 0; i < 3; i++) {
+      try {
+        return (await this.page.evaluate(() => document.body.innerText || '')).toLowerCase();
+      } catch (err) {
+        if (err.message && err.message.includes('Execution context was destroyed')) {
+          await this.page.waitForTimeout(1500);
+        } else {
+          return '';
+        }
+      }
+    }
+    return '';
+  }
+
   async detectOutcome() {
     const url = this.page.url();
-    const text = (await this.page.evaluate(() => document.body.innerText || '')).toLowerCase();
+    const text = await this.getPageText();
 
     // Success patterns
     const successRegex =
